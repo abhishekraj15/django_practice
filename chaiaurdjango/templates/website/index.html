@@ -1,4 +1,15 @@
-{% load static %}
+{% extends "layout.html" %}
+ 
+{% block title %} 
+HomePage 
+{% endblock %} 
+
+{% block content %}
+<h1>Chai aur code | HomePage</h1>
+{% endblock %}
+
+
+{% comment %} {% load static %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,4 +20,4 @@
     <h1>Welcome to Chai's Django Project</h1>
     <script src="{% static 'js/script.js' %}"></script>
   </body>
-</html>
+</html> {% endcomment %}
