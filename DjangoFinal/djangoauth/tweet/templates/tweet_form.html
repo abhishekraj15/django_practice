@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Tweet || Page
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center mt-4">Welcome to Chai Auth Project</h1>
+<h2 class="text-center mt-4">{% if form.instance.pk %}
+     Edit Tweet
+      {% else %}
+      Create tweet
+      {% endif %}
+</h2>
+
+<form  method="POST" enctype="multipart/form-data" class="form text-center">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button class="btn btn-warning" type="submit">Submit</button>
+    <a class="btn btn-primary" href="{% url "tweet_list" %}">Back to tweet list</a>
+
+</form>
+{% endblock %}
